@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  test:
+    build: ./test
+    ports:
+      - "3128:3128"
+    volumes:
+      - ./test/squid.conf:/etc/squid/squid.conf
+#     networks:
+#       - main_default
+# networks:
+#   main_default:
+#     external: true  # 既存のネットワークを指定
